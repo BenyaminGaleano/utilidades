@@ -13,3 +13,23 @@
 	\end{minipage}
 } %crea divisiones en la hoja, sino se deja espacio entre comandos
 % consecutivos de \Page estos apareceran a la par
+
+\renewcommand{\labelenumi}{$\bullet$} 
+
+\newenvironment{enumTab}{\begin{enumerate}[label=]\item \begin{enumerate}[label=$\bullet$]}{\end{enumerate}\end{enumerate}} %comando para realizar enumeraciones con cierto margen
+
+\newenvironment{block}[1]{\hspace{-0.8 cm}\textbf{\Large #1}}{\vspace{3 mm}} %ambiente importante que define una parte del reporte.
+
+\newenvironment{question}[2]{\hspace{-0.8 cm}\textbf{#1) #2\\\\}}{\vspace{3 mm}} % define una pregunta, recibe como primer parametro al número y siguiente es la pregunta
+
+\newcommand{\bib}[2]{ \textbf{\large #1:} \small #2\\} %forma sencilla de crear una referencia, como primer parametro recibe el titulo y el segundo el lugar a consultar
+
+\newcommand{\Note}[1]{\small \textbf{Nota:} #1} %comando que inserta una nota al texto
+
+%comandos personales
+%este commando sirve para crear bolas con enumeración
+\newcommand*{\enumBall}[1]
+{
+	\footnotesize\protect\tikz[baseline=-3pt]
+	\protect\node[scale=.7, circle, ball color = white]{\color{black}\Large\bf #1};
+}
