@@ -1,0 +1,15 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{utilidades}
+
+\newcommand{\Center}[1]{
+	\begin{center}
+		#1
+	\end{center}
+} %Centra el contenido que se le pasa
+
+\newcommand{\Page}[3][c]{
+	\begin{minipage}[#1]{#2\textwidth}
+		#3
+	\end{minipage}
+} %crea divisiones en la hoja, sino se deja espacio entre comandos
+% consecutivos de \Page estos apareceran a la par
