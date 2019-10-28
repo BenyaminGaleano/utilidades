@@ -22,7 +22,12 @@
 
 \newenvironment{question}[2]{\hspace{-0.8 cm}\textbf{#1) #2\\\\}}{\vspace{3 mm}} % define una pregunta, recibe como primer parametro al número y siguiente es la pregunta
 
-\newcommand{\bib}[2]{ \textbf{\large #1:} \small #2\\} %forma sencilla de crear una referencia, como primer parametro recibe el titulo y el segundo el lugar a consultar
+\def\bib[#1] #2;{\textbf{\large #1:} \small#2\\}
+\newenvironment{Bib}{ 
+	
+	\vspace*{.3cm}\hspace*{.5cm}\begin{minipage}[c]{\textwidth}}{\end{minipage}}%se ha cambiado la forma de poner la bibliografia
+
+%\newcommand{\bib}[2]{ \textbf{\large #1:} \small #2\\} %forma sencilla de crear una referencia, como primer parametro recibe el titulo y el segundo el lugar a consultar
 
 \newcommand{\Note}[1]{\small \textbf{Nota:} #1} %comando que inserta una nota al texto
 
