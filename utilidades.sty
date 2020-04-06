@@ -20,15 +20,8 @@
 
 \newenvironment{block}[1]{\hspace{-0.8 cm}\textbf{\Large #1}}{\vspace{3 mm}} %ambiente importante que define una parte del reporte.
 
-\newenvironment{questions}[3][][.]{
-	\newcounter{qtion}
-	\newcommand{\@auxI}{#1}
-	\newcommand{\@auxII}{#2}
-	\newcommand{\@auxIII}{#3}
-	\newcommand{\question}[1]{
-		\stepcounter{qtion}
-		\@auxII\@auxI{qtion}\@auxIII #1\\
-	}
+\newenvironment{questions}[3]{
+	
 	\hspace{-0.8 cm}}
 }{
 \vspace{3 mm}
