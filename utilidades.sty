@@ -22,11 +22,10 @@
 
 \newenvironment{questions}{
 	\newcounter{qtion}
-	\newcommand{\question}[2]{
+	\newcommand{\question}[1]{
 		\stepcounter{qtion}
 		\noindent\textbf{\arabic{qtion}. #1\\}
 		\hspace{.5cm}
-		#2
 	}
 }{}
 
