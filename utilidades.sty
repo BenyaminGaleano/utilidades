@@ -21,13 +21,15 @@
 \newenvironment{block}[1]{\hspace{-0.8 cm}\textbf{\Large #1}}{\vspace{3 mm}} %ambiente importante que define una parte del reporte.
 
 \newenvironment{questions}{
-	\newcounter{qtion}
+	\setcouter{qtion}{0}
 	\newcommand{\question}[1]{
 		\stepcounter{qtion}
 		\noindent\textbf{\arabic{qtion}. ##1\\}
 		\hspace*{.5cm}
 	}
-}{}
+}{
+	\setcounter{qtion}{0}
+}
 
 
 \newcommand{\Note}[1]{\small \textbf{Nota:} #1} %comando que inserta una nota al texto
