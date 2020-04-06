@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{utilidades}
 
+\RequirePackage{xargs}
+
 \newcommand{\Center}[1]{
 	\begin{center}
 		#1
@@ -20,7 +22,7 @@
 
 \newenvironment{block}[1]{\hspace{-0.8 cm}\textbf{\Large #1}}{\vspace{3 mm}} %ambiente importante que define una parte del reporte.
 
-\newenvironment{questions}[3][{}][hola]{
+\newenvironment{questions}[3][2=hola, 3=]{
 	#1
 	#2
 	#3	
