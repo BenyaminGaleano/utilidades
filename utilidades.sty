@@ -18,7 +18,15 @@
 
 \renewcommand{\labelenumi}{$\bullet$} 
 
-\newenvironment{enumTab}{\begin{enumerate}[label=]\item \begin{enumerate}[label=$\bullet$]}{\end{enumerate}\end{enumerate}} %comando para realizar enumeraciones con cierto margen
+\newcommand{\Note}[1]{\small \noindent\textbf{Nota:} #1} %comando que inserta una nota al texto
+
+%comandos personales
+%este commando sirve para crear bolas con enumeración
+\newcommand*{\enumBall}[2][blue]
+{
+	\footnotesize\protect\tikz[baseline=-3pt]
+	\protect\node[scale=.7, circle, ball color = white]{\color{#1}\Large\bf #2};
+}
 
 \newenvironment{block}[1]{\hspace{-0.8 cm}\textbf{\Large #1}}{\vspace{3 mm}} %ambiente importante que define una parte del reporte.
 
@@ -31,15 +39,4 @@
 	}
 }{
 	\setcounter{qtion}{0}
-}
-
-
-\newcommand{\Note}[1]{\small \textbf{Nota:} #1} %comando que inserta una nota al texto
-
-%comandos personales
-%este commando sirve para crear bolas con enumeración
-\newcommand*{\enumBall}[1]
-{
-	\footnotesize\protect\tikz[baseline=-3pt]
-	\protect\node[scale=.7, circle, ball color = white]{\color{black}\Large\bf #1};
 }
