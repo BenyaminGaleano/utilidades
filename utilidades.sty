@@ -36,6 +36,7 @@
 \newenvironment{questions}[1][Cuestionario]{
 	\vspace*{.5cm}
 	\noindent{\LARGE \textbf{#1}}
+	\vspace*{.5cm}
 	
 	\newcommand{\question}[1]{
 		\stepcounter{qtion}
@@ -43,7 +44,10 @@
 		\noindent\textbf{\arabic{qtion}. ##1\\}
 		\hspace*{.5cm}
 	}
+
+	\hspace*{.5}\begin{minipage}[c]{\textwidth}
 }{
+	\end{minipage}
 	\setcounter{qtion}{0}
 	\vspace*{.5cm}
 }
